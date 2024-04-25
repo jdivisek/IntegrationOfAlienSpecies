@@ -13,7 +13,7 @@ my.cols2 <- c(native="#5EABB6",
               invasive="#A54888")
 
 ##PCA
-pca <- prcomp(trait.imp.ls[, tr.vars], center = T, scale. = T)
+pca <- prcomp(trait.imp.ls[, tr.vars], center = F, scale. = F)
 
 ##PCA plot
 p1 <- fviz_pca_biplot(pca,
