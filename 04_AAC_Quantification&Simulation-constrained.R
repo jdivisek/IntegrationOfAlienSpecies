@@ -31,7 +31,7 @@ accum <- function(dat, centr, st)
   return(acc)
 }
 
-##Assemble AAC values for native and aline species
+##Assemble AAC values for native and alien species
 accum.calc <- function(one.plot, tr.vars, nat.means=NULL)
 {
   if(length(unique(one.plot$INVASION.STATUS)) > 1 & any(one.plot$INVASION.STATUS %in% c("native")))
