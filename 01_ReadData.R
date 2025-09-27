@@ -1,7 +1,13 @@
 ##READ DATA---------------------------------------------------------------------
 
+##Data for analyses available in the Zenodo repository:
+#Divíšek, J., Pyšek, P., Richardson, D. M., Gotelli, N. J., Beckage, B., Molofsky, J., 
+#Lososová, Z., & Chytrý, M. (2025). Data and R codes from: Naturalized and invasive 
+#species integrate differently in the trait space of local plant communities (1.0) 
+#[Data set]. Zenodo. https://doi.org/10.5281/zenodo.17116216
+
 ##Species data (invasion status, life form, frequency in habitat and traits)
-#It contains the following columns:
+#The file contains the following columns:
 #
 #NATIVE.ALIEN = Native/alien status of species (values: native, alien).
 #INVASION.STATUS = Invasion status for alien species (values: native, naturalized, invasive).
@@ -36,7 +42,7 @@ SpecData.MICE <- read.delim("SpecData.MICE.txt", header = T, row.names = 1)
 SpecData.Rphylo <- read.delim("SpecData.Rphylo.txt", header = T, row.names = 1)
 
 ##Community data in long format
-#It contains the following columns:
+#The file contains the following columns:
 #
 #ID = ID of the vegetation plot.
 #Species = Taxon name.
@@ -133,5 +139,6 @@ SpecData.missFor.ord <- read.delim("SpecData.missFor.txt", header = T, row.names
 SpecData.missFor.ord[, tr.vars[-6]] <- log10(SpecData.missFor.ord[, tr.vars[-6]])
 SpecData.missFor.ord[, tr.vars[-6]] <- scale(SpecData.missFor.ord[, tr.vars[-6]])
 SpecData.missFor.ord$FLOWERING.MEAN <- ordered(SpecData.missFor.ord$FLOWERING.MEAN, levels = seq(3, 10, 0.5))
+
 
 CommData.missFor.ord <- cbind(CommData, SpecData.missFor.ord[CommData$Species, tr.vars])
