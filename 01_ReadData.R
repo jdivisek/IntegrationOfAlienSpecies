@@ -1,6 +1,6 @@
 ##READ DATA---------------------------------------------------------------------
 
-##Data for analyses available in the Zenodo repository:
+##Data for analyses are available in the Zenodo repository:
 #Divíšek, J., Pyšek, P., Richardson, D. M., Gotelli, N. J., Beckage, B., Molofsky, J., 
 #Lososová, Z., & Chytrý, M. (2025). Data and R codes from: Naturalized and invasive 
 #species integrate differently in the trait space of local plant communities (1.0) 
@@ -142,3 +142,4 @@ SpecData.missFor.ord$FLOWERING.MEAN <- ordered(SpecData.missFor.ord$FLOWERING.ME
 
 
 CommData.missFor.ord <- cbind(CommData, SpecData.missFor.ord[CommData$Species, tr.vars])
+
