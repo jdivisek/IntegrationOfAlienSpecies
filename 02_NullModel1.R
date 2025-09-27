@@ -1,6 +1,6 @@
 ###NULL MODEL 1-----------------------------------------------------------------
 ##Simulates virtual communities by the unweighted drawing of species from the 
-#native/naturalizes species pool.
+#native/naturalized species pool.
 #Returns distance statistics, their deviations from null expectation and 
 #empirical p-values.
 
@@ -189,5 +189,6 @@ for(q in c("T", "X", "S", "M","K", "L"))
   }
 
 }
+
 
 saveRDS(NULL1ali.missFor, file="NULL1ali.missFor.rds")
